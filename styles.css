@@ -1,119 +1,72 @@
-/* Basic Reset */
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body Styling */
 body {
-    font-family: 'Courier New', Courier, monospace;
     background-color: #121212;
-    color: #00ff00;
-    line-height: 1.5;
-    font-size: 16px;
-    padding: 20px;
+    color: #00FF00;
+    font-family: 'Courier New', monospace;
+    line-height: 1.6;
 }
 
-/* Header */
 header {
-    text-align: center;
-    padding: 30px;
-}
-
-h1 {
-    font-size: 3em;
-    color: #00ff00;
-    text-shadow: 0 0 10px rgba(0, 255, 0, 0.7), 0 0 20px rgba(0, 255, 0, 0.5);
-}
-
-p {
-    color: #aaa;
-    font-size: 1.2em;
-    margin-top: 10px;
-}
-
-/* Categories Section */
-.category {
-    margin: 40px 0;
-}
-
-.category h2 {
-    font-size: 2em;
-    color: #00ff00;
-    margin-bottom: 10px;
-    text-shadow: 0 0 8px rgba(0, 255, 0, 0.5);
-}
-
-/* Brand & Category Links */
-.brand a, .category-item {
-    font-size: 1.2em;
-    color: #00ff00;
-    text-decoration: none;
-    display: block;
-    margin: 10px 0;
-    padding: 10px;
-    background-color: rgba(0, 255, 0, 0.1);
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.brand a:hover, .category-item:hover {
-    background-color: rgba(0, 255, 0, 0.3);
-}
-
-/* Code List */
-.codes ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.codes ul li {
-    margin: 10px 0;
-}
-
-.codes ul li a {
-    color: #00ff00;
-    font-size: 1.2em;
-    text-decoration: none;
-    border: 1px solid #00ff00;
-    padding: 8px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.codes ul li a:hover {
-    background-color: rgba(0, 255, 0, 0.3);
-}
-
-/* Container for centralizing content */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
     background-color: #1a1a1a;
-    border-radius: 10px;
+    color: #00FF00;
+    padding: 20px;
+    text-align: center;
 }
 
-/* Styling for "hacker" look, neon glow effect */
-a {
-    font-family: 'Courier New', Courier, monospace;
+h1, h2, h3 {
+    font-weight: bold;
 }
 
-a:active, a:focus {
-    outline: none;
+.container {
+    padding: 20px;
 }
 
-/* Dark Mode and Page Transitions */
-html {
+footer {
+    background-color: #1a1a1a;
+    color: #00FF00;
+    text-align: center;
+    padding: 10px;
+}
+
+.section {
+    margin: 20px 0;
+}
+
+.brand {
+    background-color: #333;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    margin-top: 50px;
-    font-size: 1.2em;
-    color: #555;
+.brand a {
+    color: #00FF00;
+    text-decoration: none;
+}
+
+.brand:hover {
+    background-color: #444;
+}
+
+.category {
+    margin: 20px 0;
+}
+
+.category-item {
+    background-color: #222;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.category-item:hover {
+    background-color: #444;
 }
