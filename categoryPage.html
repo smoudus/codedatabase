@@ -1,25 +1,28 @@
-// Get the brand and category from the URL query parameters
-const urlParams = new URLSearchParams(window.location.search);
-const brand = urlParams.get('brand');
-const category = urlParams.get('category');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-// Update the header dynamically based on the selected brand and category
-document.querySelector('header h1').innerText = `${brand.charAt(0).toUpperCase() + brand.slice(1)} ${category.charAt(0).toUpperCase() + category.slice(1)}`;
+    <header>
+        <h1>Category Codes</h1>
+        <button onclick="window.history.back()">Back</button>
+    </header>
 
-// Example hardcoded codes for demonstration
-const codes = {
-    "engines": ["ENGINE_001", "ENGINE_002", "ENGINE_003"],
-    "chassis": ["CHASSIS_001", "CHASSIS_002", "CHASSIS_003"],
-    "interior": ["INTERIOR_001", "INTERIOR_002", "INTERIOR_003"]
-};
+    <div class="container">
+        <h2>Engines for Scania</h2>
+        <div class="category-item">Engine 1 Code</div>
+        <div class="category-item">Engine 2 Code</div>
+    </div>
 
-// Generate code links dynamically based on the selected category
-const codeContainer = document.querySelector('.codes ul');
-codes[category].forEach(code => {
-    const codeItem = document.createElement('li');
-    const codeLink = document.createElement('a');
-    codeLink.href = "#";
-    codeLink.innerText = code;
-    codeItem.appendChild(codeLink);
-    codeContainer.appendChild(codeItem);
-});
+    <footer>
+        <p>&copy; 2025 CodeDatabase</p>
+    </footer>
+
+    <script src="categoryPage.js"></script>
+</body>
+</html>
