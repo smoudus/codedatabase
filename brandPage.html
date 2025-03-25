@@ -1,0 +1,36 @@
+// Get the brand name from the URL query parameters
+const urlParams = new URLSearchParams(window.location.search);
+const brand = urlParams.get('brand');
+
+// Update the header dynamically based on the selected brand
+document.querySelector('header h1').innerText = `${brand.charAt(0).toUpperCase() + brand.slice(1)} Codes`;
+
+// For now, we are hardcoding categories, you can expand this as necessary
+const categories = {
+    "daf": ["Engines", "Chassis", "Interior"],
+    "iveco": ["Engines", "Chassis", "Interior"],
+    "man": ["Engines", "Chassis", "Interior"],
+    "mercedes": ["Engines", "Chassis", "Interior"],
+    "renault": ["Engines", "Chassis", "Interior"],
+    "scania": ["Engines", "Chassis", "Interior"],
+    "volvo": ["Engines", "Chassis", "Interior"],
+    "feldbinder": ["Engines", "Chassis", "Interior"],
+    "kaessbohrer": ["Engines", "Chassis", "Interior"],
+    "koegel": ["Engines", "Chassis", "Interior"],
+    "krone": ["Engines", "Chassis", "Interior"],
+    "schwarzmuller": ["Engines", "Chassis", "Interior"],
+    "schmitz": ["Engines", "Chassis", "Interior"],
+    "tirsan": ["Engines", "Chassis", "Interior"],
+    "wielton": ["Engines", "Chassis", "Interior"],
+    "base": ["Engines", "Chassis", "Interior"]
+};
+
+// Generate category links dynamically
+const categoryContainer = document.getElementById('brandCategories');
+categories[brand].forEach(category => {
+    const categoryLink = document.createElement('a');
+    categoryLink.href = `categoryPage.html?brand=${brand}&category=${category.toLowerCase()}`;
+    categoryLink.innerText = category;
+    categoryLink.classList.add('category-item');
+    categoryContainer.appendChild(categoryLink);
+});

@@ -1,0 +1,25 @@
+// Get the brand and category from the URL query parameters
+const urlParams = new URLSearchParams(window.location.search);
+const brand = urlParams.get('brand');
+const category = urlParams.get('category');
+
+// Update the header dynamically based on the selected brand and category
+document.querySelector('header h1').innerText = `${brand.charAt(0).toUpperCase() + brand.slice(1)} ${category.charAt(0).toUpperCase() + category.slice(1)}`;
+
+// Example hardcoded codes for demonstration
+const codes = {
+    "engines": ["ENGINE_001", "ENGINE_002", "ENGINE_003"],
+    "chassis": ["CHASSIS_001", "CHASSIS_002", "CHASSIS_003"],
+    "interior": ["INTERIOR_001", "INTERIOR_002", "INTERIOR_003"]
+};
+
+// Generate code links dynamically based on the selected category
+const codeContainer = document.querySelector('.codes ul');
+codes[category].forEach(code => {
+    const codeItem = document.createElement('li');
+    const codeLink = document.createElement('a');
+    codeLink.href = "#";
+    codeLink.innerText = code;
+    codeItem.appendChild(codeLink);
+    codeContainer.appendChild(codeItem);
+});
